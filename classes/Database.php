@@ -16,7 +16,7 @@ class Database{
     public function dbConnection(){
         
         try{
-            $conn = new PDO('mysql:host='.$this->db_host.';dbname='.$this->db_name,$this->db_username,$this->db_password);
+            $conn = new PDO('pgsql:host='.$this->db_host.';port=5432;dbname='.$this->db_name,$this->db_username,$this->db_password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         }
