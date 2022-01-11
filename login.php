@@ -69,7 +69,7 @@ else:
 
                     $jwt = new JwtHandler();
                     $token = $jwt->jwtEncodeData(
-                        'http://localhost/php_auth_api/',
+                        'https://coex-crud-api.herokuapp.com/',
                         array("user_id"=> $row['id'])
                     );
                     

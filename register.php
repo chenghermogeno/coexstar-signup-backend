@@ -62,6 +62,7 @@ else :
     else :
         try {
 
+            // checking if email is already in use
             $check_email = "SELECT email FROM users WHERE email=:email";
             $check_email_stmt = $conn->prepare($check_email);
             $check_email_stmt->bindValue(':email', $email, PDO::PARAM_STR);
